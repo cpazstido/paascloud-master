@@ -36,7 +36,7 @@ public class OpcGaodeFeignClient extends BaseController implements OpcGaodeFeign
 	@ApiOperation(httpMethod = "POST", value = "根据IP获取位置信息")
 	public Wrapper<GaodeLocation> getLocationByIpAddr(@RequestParam("ipAddr") String ipAddr) {
 		String temp = "127.0.";
-		String temp2 = "192.168.";
+		String temp2 = "10.10.";
 		if (ipAddr.startsWith(temp) || ipAddr.startsWith(temp2)) {
 			ipAddr = "111.199.188.14";
 		}

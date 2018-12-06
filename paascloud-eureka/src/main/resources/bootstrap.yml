@@ -6,7 +6,7 @@ spring:
         - veth.*
         - VM.*
       preferredNetworks:
-        - 192.168
+        - 10.10
 
 eureka:
   server:

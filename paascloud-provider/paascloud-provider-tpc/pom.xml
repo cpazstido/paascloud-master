@@ -3,6 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+    <repositories>
+        <repository>
+            <id>paascloud-lib-rep</id>
+            <url>http://139.199.125.217:8081/content/repositories/paascloud-lib-rep/</url>
+        </repository>
+    </repositories>
+
     <parent>
         <groupId>com.liuzm.paascloud.provider</groupId>
         <artifactId>paascloud-provider</artifactId>
@@ -14,6 +21,8 @@
 
     <name>paascloud-provider-tpc</name>
     <description>任务中心 - Task processing center</description>
+
+
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
