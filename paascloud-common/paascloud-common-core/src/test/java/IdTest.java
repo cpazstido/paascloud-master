@@ -23,7 +23,7 @@ public class IdTest {
 	 * @throws InterruptedException the interrupted exception
 	 */
 	public static void main(String[] args) throws InterruptedException {
-		UniqueIdGenerator instance = UniqueIdGenerator.getInstance(IncrementIdGenerator.getServiceId());
+		UniqueIdGenerator instance = UniqueIdGenerator.getInstance(999);
 		ExecutorService es = Executors.newFixedThreadPool(10);
         final HashSet idSet = new HashSet();
         Collections.synchronizedCollection(idSet);
@@ -35,10 +35,11 @@ public class IdTest {
                     long id = instance.nextId();
                     synchronized (idSet) {
                         idSet.add(id);
+                        System.out.println(id);
                     }
                 }
             });
-        es.shutdown();
+//        es.shutdown();
         es.awaitTermination(10, TimeUnit.SECONDS);
         long end = System.currentTimeMillis();
         log.info(" end generate id ");

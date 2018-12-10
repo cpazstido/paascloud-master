@@ -28,7 +28,7 @@ public class UniqueIdGenerator implements IdGenerator {
 	 */
 	private static final int APP_HOST_ID_BITS = 13;
 	/**
-	 * 序列号，支持单节点最高1000*1024的并发
+	 * 序列号，支持单节点最高1000*1024的并发(单台每秒并发1000*1024，这个已经相当大了)
 	 */
 	private final static int SEQUENCE_BITS = 10;
 
